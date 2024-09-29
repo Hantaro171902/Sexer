@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Test</title>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/game-test.css" />
+    <link rel="stylesheet" href="../CSS/fonts.css" />
+    <!-- JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <script src="../JS/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <!-- Navbar -->
+      <nav class="header">
+        <ul class="sexer-navbar-sidebar">
+          <li onclick="hideSidebar()">
+            <a href="#"><i class="fa-solid fa-xmark"></i></a>
+          </li>
+          <li><a href="../HTML/index.html">HOME</a></li>
+          <li><a href="#game">GAME</a></li>
+          <li><a href="#contact">ABOUT US</a></li>
+        </ul>
+
+        <ul>
+          <li>
+            <a href="../html/index.html">
+              <img class="logo-sexer-text" src="../assets/Sexer-logo.svg"
+            /></a>
+          </li>
+          <li class="hideonMobile">
+            <a id="nav-text" href="../HTML/index.html">HOME</a>
+          </li>
+          <li class="hideonMobile"><a id="nav-text" href="#game">GAME</a></li>
+          <li class="hideonMobile">
+            <a id="nav-text" href="#contact">ABOUT US</a>
+          </li>
+
+          <li class="btn-menu" onclick="showSidebar()">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- GAME INTRODUCE -->
+      <div class="game-intro">
+        <h1>GIỚI THIỆU TRÒ CHƠI</h1>
+        <div class="icon">
+          <div class="circle">
+            <img src="../IMG/img-pattern-tree.png" alt="image" />
+          </div>
+          <div class="game-meaning">
+            <p class="game-title-color-green">
+              Màu xanh lá (Biểu tượng cái cây):
+            </p>
+            <p class="color-explain">
+              Chủ đề về các vấn đề xảy ra trong trường học.
+            </p>
+          </div>
+        </div>
+        <div class="icon">
+          <div class="circle">
+            <img src="../IMG/img-pattern-sun.png" alt="image" />
+          </div>
+          <div class="game-meaning">
+            <p class="game-title-color-yellow">
+              Màu vàng (Biểu tượng mặt trời):
+            </p>
+            <p class="color-explain">Chủ đề về vấn đề xảy ra trong gia đình.</p>
+          </div>
+        </div>
+        <div class="icon">
+          <div class="circle">
+            <img src="../IMG/img-pattern-flower.png" alt="image" />
+          </div>
+          <div class="game-meaning">
+            <p class="game-title-color-pink">Màu hồng (Biểu tượng bông hoa):</p>
+            <p class="color-explain">Chủ đề về bản thân của trẻ.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div class="sexer-card-border">
+        <div class="sexer-card-wrapper"></div>
+        <div
+          id="card-1"
+          class="flip-card"
+          onmouseover="flipCard('card-1')"
+        >
+          <div class="thefont">
+            <img class="image-item" src="../IMG/school-1none.png" alt="fontcard" />
+          </div>
+          <div class="theback">
+            <img class="image-item" src="../IMG/back-card.png" alt="backcard" />
+          </div>
+        </div>
+        <div
+          id="card-2"
+          class="flip-card"
+          onmouseover="flipCard('card-2')"
+        >
+          <div class="thefont">
+            <img class="image-item" src="../IMG/school-2none.png" alt="fontcard" />
+          </div>
+          <div class="theback">
+            <img class="image-item" src="../IMG/back-card.png" alt="backcard" />
+          </div>
+        </div>
+        <div
+          id="card-3"
+          class="flip-card"
+          onmouseover="flipCard('card-3')"
+        >
+          <div class="thefont">
+            <img class="image-item" src="../IMG/school-3none.png" alt="fontcard" />
+          </div>
+          <div class="theback">
+            <img class="image-item" src="../IMG/back-card.png" alt="backcard" />
+          </div>
+        </div>
+        <div
+          id="card-4"
+          class="flip-card"
+          onmouseover="flipCard('card-4')"
+        >
+          <div class="thefont">
+            <img class="image-item" src="../IMG/school-4none.png" alt="fontcard" />
+          </div>
+          <div class="theback">
+            <img class="image-item" src="../IMG/back-card.png" alt="backcard" />
+          </div>
+        </div>
+        <div
+          id="card-5"
+          class="flip-card "
+          onmouseover="flipCard('card-5')"
+        >
+          <div class="thefont">
+            <img class="image-item" src="../IMG/school-4none.png" alt="fontcard" />
+          </div>
+          <div class="theback">
+            <img class="image-item" src="../IMG/back-card.png" alt="backcard" />
+          </div>
+        </div>
+        <div
+          id="card-6"
+          class="flip-card "
+          onmouseover="flipCard('card-6')"
+        >
+          <div class="thefont">
+            <img class="image-item" src="../IMG/school-6none.png" alt="fontcard" />
+          </div>
+          <div class="theback">
+            <img class="image-item" src="../IMG/back-card.png" alt="backcard" />
+          </div>
+        </div>
+        <div
+          id="card-7"
+          class="flip-card "
+          onmouseover="flipCard('card-7')"
+        >
+          <div class="thefont">
+            <img class="image-item" src="../IMG/school-7none.png" alt="fontcard" />
+          </div>
+          <div class="theback">
+            <img class="image-item" src="../IMG/back-card.png" alt="backcard" />
+          </div>
+        </div>
+        <div
+          id="card-8"
+          class="flip-card "
+          onmouseover="flipCard('card-8')"
+        >
+          <div class="thefont">
+            <img class="image-item" src="../IMG/school-8none.png" alt="fontcard" />
+          </div>
+          <div class="theback">
+            <img class="image-item" src="../IMG/back-card.png" alt="backcard" />
+          </div>
+        </div>
+        <div
+          id="card-9"
+          class="flip-card "
+          onmouseover="flipCard('card-9')"
+        >
+          <div class="thefont">
+            <img class="image-item" src="../IMG/school-9none.png" alt="fontcard" />
+          </div>
+          <div class="theback">
+            <img class="image-item" src="../IMG/back-card.png" alt="backcard" />
+          </div>
+        </div>
+        <div
+          id="card-10"
+          class="flip-card "
+          onmouseover="flipCard('card-10')"
+        >
+          <div class="thefont">
+            <img class="image-item" src="../IMG/school-10none.png" alt="fontcard" />
+          </div>
+          <div class="theback">
+            <img class="image-item" src="../IMG/back-card.png" alt="backcard" />
+          </div>
+        </div>
+      </div>
+
+      <div class="rectangle-17">
+        <div class="flex-row">
+          <div class="subtract"></div>
+          <div class="frame-18">
+            <div class="group">
+              <div class="component">
+                <div class="frame-19"></div>
+                <div class="frame-1a"><div class="image"></div></div>
+              </div>
+              <div class="component-1b">
+                <div class="frame-1c"></div>
+                <div class="frame-1d"><div class="image-1e"></div></div>
+              </div>
+              <div class="component-1f">
+                <div class="frame-20"></div>
+                <div class="frame-21"><div class="image-22"></div></div>
+              </div>
+              <div class="component-23">
+                <div class="frame-24"></div>
+                <div class="frame-25"><div class="image-26"></div></div>
+              </div>
+              <div class="component-27">
+                <div class="frame-28"></div>
+                <div class="frame-29"><div class="image-2a"></div></div>
+              </div>
+              <div class="component-2b">
+                <div class="frame-2c"></div>
+                <div class="frame-2d"><div class="image-2e"></div></div>
+              </div>
+              <div class="component-2f">
+                <div class="frame-30"></div>
+                <div class="frame-31"><div class="image-32"></div></div>
+              </div>
+              <div class="component-33">
+                <div class="frame-34"></div>
+                <div class="frame-35"><div class="image-36"></div></div>
+              </div>
+              <div class="component-37">
+                <div class="frame-38"></div>
+                <div class="frame-39"><div class="image-3a"></div></div>
+              </div>
+              <div class="component-3b">
+                <div class="frame-3c"></div>
+                <div class="frame-3d"><div class="image-3e"></div></div>
+              </div>
+              <div class="component-3f">
+                <div class="frame-40"></div>
+                <div class="frame-41"><div class="image-42"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="icon-tree-43"></div>
+        </div>
+        <div class="flex-row-44">
+          <div class="group-45"></div>
+          <div class="rectangle-46">
+            <button class="button">CHÍNH XÁC</button>
+          </div>
+        </div>
+      </div>
+      <div class="rectangle-47">
+        <div class="flex-row-bc">
+          <div class="group-48"></div>
+          <div class="frame-49">
+            <div class="group-4a">
+              <div class="component-4b">
+                <div class="frame-4c"></div>
+                <div class="frame-4d"><div class="image-4e"></div></div>
+              </div>
+              <div class="component-4f">
+                <div class="frame-50"></div>
+                <div class="frame-51"><div class="image-52"></div></div>
+              </div>
+              <div class="component-53">
+                <div class="frame-54"></div>
+                <div class="frame-55"><div class="image-56"></div></div>
+              </div>
+              <div class="component-57">
+                <div class="frame-58"></div>
+                <div class="frame-59"><div class="image-5a"></div></div>
+              </div>
+              <div class="component-5b">
+                <div class="frame-5c"></div>
+                <div class="frame-5d"><div class="image-5e"></div></div>
+              </div>
+              <div class="component-5f">
+                <div class="frame-60"></div>
+                <div class="frame-61"><div class="image-62"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group-63"></div>
+      </div>
+      <div class="rectangle-64">
+        <div class="flex-row-bb">
+          <div class="group-65"></div>
+          <div class="frame-66">
+            <div class="group-67">
+              <div class="component-68">
+                <div class="frame-69"></div>
+                <div class="frame-6a"><div class="image-6b"></div></div>
+              </div>
+              <div class="component-6c">
+                <div class="frame-6d"></div>
+                <div class="frame-6e"><div class="image-6f"></div></div>
+              </div>
+              <div class="component-70">
+                <div class="frame-71"></div>
+                <div class="frame-72"><div class="image-73"></div></div>
+              </div>
+              <div class="component-74">
+                <div class="frame-75"></div>
+                <div class="frame-76"><div class="image-77"></div></div>
+              </div>
+              <div class="component-78">
+                <div class="frame-79"></div>
+                <div class="frame-7a"><div class="image-7b"></div></div>
+              </div>
+              <div class="component-7c">
+                <div class="frame-7d"></div>
+                <div class="frame-7e"><div class="image-7f"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="group-80"></div>
+      </div>
+      <div class="vector-81"></div>
+      <div class="vector-82"></div>
+    </div>
+    <!-- Generated by Codia AI - https://codia.ai/ -->
+  </body>
+</html>

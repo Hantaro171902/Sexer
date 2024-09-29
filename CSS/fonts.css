@@ -35,7 +35,14 @@
 /* Bold */
 @font-face {
     font-family: 'Matahari';
-    src: url(../fonts/Matahari/);
+    src: url(../fonts/Matahari/Matahari-700Bold.otf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Matahari';
+    src: url(../fonts/Matahari/Matahari-900Black.otf);
     font-weight: 900;
     font-style: normal;
 }
@@ -43,23 +50,8 @@
 /* Regular */
 @font-face {
     font-family: 'Matahari';
-    src: url(../fonts/Matahari//Neulis-Regular.otf);
-    font-weight: normal;
+    src: url(../Fonts/Matahari/Matahari-400Regular.otf);
+    font-weight: 400;
     font-style: normal;
 }
 
-/* Light */
-@font-face {
-    font-family: 'Matahari';
-    src: url(../fonts/Matahari//Neulis-Light.otf);
-    font-weight: 300;
-    font-style: normal;
-}
-
-/* Italic */
-@font-face {
-    font-family: 'Matahari';
-    src: url(../fonts/Matahari//Neulis-Italic.otf);
-    font-weight: normal;
-    font-style: italic;
-}
