@@ -1,0 +1,317 @@
+:root {
+    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+        "Source Han Sans CN", sans-serif;
+}
+
+.main-container {
+    overflow: hidden;
+}
+
+.main-container,
+.main-container * {
+    box-sizing: border-box;
+}
+
+input,
+select,
+textarea,
+button {
+    outline: 0;
+}
+
+.main-container {
+    position: relative;
+    width: 1440px;
+    height: 4177px;
+    margin: 0 auto;
+    background: #eeede8;
+    overflow: hidden;
+}
+
+.rectangle {
+    position: relative;
+    width: 1440px;
+    height: 119px;
+    margin: 0 0 0 0;
+    z-index: 5;
+}
+
+.frame {
+    position: absolute;
+    width: 4.03%;
+    height: 52.94%;
+    top: 23.53%;
+    left: 5.83%;
+    z-index: 9;
+    overflow: hidden;
+}
+
+.flex-column-bb {
+    position: absolute;
+    width: 46.43%;
+    height: 100%;
+    top: -0.01%;
+    left: 53.58%;
+    z-index: 14;
+}
+
+.vector {
+    position: relative;
+    width: 26.407px;
+    height: 25.569px;
+    margin: 0 0 0 0;
+    background: url(./assets/images/cdbae038-696d-4377-9aa6-1fd1ec4f975d.png) no-repeat center;
+    background-size: 100% 100%;
+    z-index: 11;
+}
+
+.vector-1 {
+    position: relative;
+    width: 7.199px;
+    height: 9.352px;
+    margin: 1.576px 0 0 10.795px;
+    background: url(./assets/images/7bc284e4-6ea4-4f0f-af01-a0c30408af03.png) no-repeat center;
+    background-size: 100% 100%;
+    z-index: 14;
+}
+
+.vector-2 {
+    position: relative;
+    width: 26.407px;
+    height: 25.569px;
+    margin: 0.93px 0 0 0.52px;
+    background: url(./assets/images/a3354469-11dd-458d-9779-60c67dd9d977.png) no-repeat center;
+    background-size: 100% 100%;
+    z-index: 12;
+}
+
+.flex-column-ade {
+    position: absolute;
+    width: 47.71%;
+    height: 97.39%;
+    top: 1.57%;
+    left: 0;
+    z-index: 13;
+}
+
+.vector-3 {
+    position: relative;
+    width: 27.564px;
+    height: 24.911px;
+    margin: 0 0 0 0.11px;
+    background: url(./assets/images/49bc9d00-c48f-4458-8fd8-2a700785745e.png) no-repeat center;
+    background-size: 100% 100%;
+    z-index: 10;
+}
+
+.vector-4 {
+    position: relative;
+    width: 27.029px;
+    height: 24.554px;
+    margin: 11.889px 0 0 0;
+    background: url(./assets/images/abce598b-0ad9-4b53-bc8e-a10222a45e21.png) no-repeat center;
+    background-size: 100% 100%;
+    z-index: 13;
+}
+
+.about-us {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 20.17%;
+    top: 42.02%;
+    left: 86.94%;
+    color: #333333;
+    font-family: Matahari, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 8;
+}
+
+.home-5 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 20.17%;
+    top: 42.02%;
+    left: 59.03%;
+    color: #f285b6;
+    font-family: Matahari, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 6;
+}
+
+.game {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: absolute;
+    height: 20.17%;
+    top: 42.02%;
+    left: 73.06%;
+    color: #333333;
+    font-family: Matahari, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    white-space: nowrap;
+    z-index: 7;
+}
+
+.se-xe {
+    position: relative;
+    width: 1300px;
+    height: 122px;
+    margin: 731px 0 0 70px;
+    font-family: Inter, var(--default-font-family);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.045px;
+    text-align: center;
+}
+
+.se-xe-6 {
+    position: relative;
+    color: #f285b6;
+    font-family: Nunito, var(--default-font-family);
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 40.92px;
+    text-align: center;
+}
+
+.mong-muon-la-su-ket-noi {
+    position: relative;
+    color: #16b250;
+    font-family: Nunito, var(--default-font-family);
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 40.92px;
+    text-align: center;
+}
+
+.rectangle-7 {
+    position: relative;
+    width: 1298px;
+    height: 668px;
+    margin: 1108px 0 0 72px;
+    font-size: 0px;
+    border: 2px solid #000000;
+    z-index: 3;
+    overflow: visible auto;
+    border-radius: 15px;
+}
+
+.what-people-saying {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    width: 548px;
+    height: 64px;
+    margin: 45px 0 0 379px;
+    color: #000000;
+    font-family: Nunito, var(--default-font-family);
+    font-size: 47px;
+    font-weight: 900;
+    line-height: 64px;
+    text-align: center;
+    white-space: nowrap;
+    z-index: 15;
+}
+
+.flex-row {
+    position: relative;
+    width: 1170px;
+    height: 407px;
+    margin: 90px 0 0 78px;
+    z-index: 43;
+}
+
+.ellipse {
+    position: absolute;
+    width: 204px;
+    height: 204px;
+    top: 0;
+    left: 63px;
+    background: url(./assets/images/d13355b7-30b8-45bc-9c5c-8b4b5709f8f4.png) no-repeat center;
+    background-size: cover;
+    z-index: 27;
+    border-radius: 50%;
+}
+
+.ellipse-8 {
+    position: absolute;
+    width: 204px;
+    height: 204px;
+    top: 0;
+    left: 483px;
+    background: url(./assets/images/ef11f5f7-969a-4ec6-8845-46d8c09eb3ae.png) no-repeat center;
+    background-size: cover;
+    z-index: 28;
+    border-radius: 50%;
+}
+
+.ellipse-9 {
+    position: absolute;
+    width: 204px;
+    height: 204px;
+    top: 0;
+    left: 873px;
+    background: url(./assets/images/80a83d8a-1c9d-4c41-aad1-c962f4e8600b.png) no-repeat center;
+    background-size: cover;
+    z-index: 41;
+    border-radius: 50%;
+}
+
+.nhom-tre-em {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: absolute;
+    width: 347px;
+    height: 147px;
+    top: 172px;
+    left: 433px;
+    color: #333333;
+    font-family: Nunito, var(--default-font-family);
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 34.1px;
+    text-align: center;
+    z-index: 30;
+}
+
+.thay-luong-minh-dien {
+    position: absolute;
+    width: 335px;
+    height: 80px;
+    top: 213px;
+    left: 13px;
+    font-family: Matahari, var(--default-font-family);
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    z-index: 29;
+}
+
+.thay-luong-minh-dien-a {
+    position: relative;
+    color: #333333;
+    font-family: Nunito, var(--default-font-family);
+    font-size: 25px;
+    font-weight: 900;
+}

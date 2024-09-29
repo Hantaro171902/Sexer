@@ -1,0 +1,65 @@
+/* Neulis Font */
+/* Bold */
+@font-face {
+    font-family: 'Neulis';
+    src: url(../fonts/Neulis/Neulis-Black.otf);
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Neulis';
+    src: url(../fonts/Neulis/Neulis-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Neulis';
+    src: url(../fonts/Neulis/Neulis-Light.otf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Neulis';
+    src: url(../fonts/Neulis/Neulis-Italic.otf);
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Matahari Font */
+/* Bold */
+@font-face {
+    font-family: 'Matahari';
+    src: url(../fonts/Matahari/);
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Regular */
+@font-face {
+    font-family: 'Matahari';
+    src: url(../fonts/Matahari//Neulis-Regular.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Matahari';
+    src: url(../fonts/Matahari//Neulis-Light.otf);
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Matahari';
+    src: url(../fonts/Matahari//Neulis-Italic.otf);
+    font-weight: normal;
+    font-style: italic;
+}
