@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flip Cards with Drag Slider</title>
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #eeeeee;
+      }
+
+      .container {
+        max-width: 1200px;
+        width: 95%;
+      }
+
+      .slider-wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+      }
+
+      .slider-wrapper .slide-button {
+        position: absolute;
+        top: 50%;
+        height: 50px;
+        width: 50px;
+        color: #fff;
+        border: none;
+        outline: none;
+        background-color: #000;
+        font-size: 2.2rem;
+        cursor: pointer;
+        border-radius: 50%;
+        transform: translateY(-50%);
+      }
+
+      .slider-wrapper .slide-button:hover {
+        background: #444;
+      }
+
+      .slider-wrapper .slide-button#prev-button {
+        left: -20px;
+      }
+
+      .slider-wrapper .slide-button#next-button {
+        right: -20px;
+      }
+
+      .slider-wrapper .image-list {
+        display: flex;
+        gap: 18px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        width: 100%;
+      }
+
+      .slider-wrapper .image-list::-webkit-scrollbar-corner {
+        display: none;
+      }
+
+      /* Flip Card Effect */
+      .flip-card {
+        perspective: 1000px;
+        width: 189px;
+        height: 340px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .flip-card .thefont,
+      .flip-card .theback {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: transform 0.6s;
+      }
+
+      .flip-card .theback {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card.flipped .thefont {
+        transform: rotateY(180deg);
+      }
+
+      .flip-card.flipped .theback {
+        transform: rotateY(0deg);
+      }
+
+      .container .slider-scrollbar {
+        height: 24px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .slider-scrollbar .scrollbar-track {
+        height: 2px;
+        width: 100%;
+        background-color: #ccc;
+        position: relative;
+        border-radius: 4px;
+      }
+
+      .slider-scrollbar:hover .scrollbar-track {
+        height: 4px;
+      }
+
+      .slider-scrollbar .scrollbar-thumb {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        background: #000;
+        border-radius: inherit;
+        cursor: grab;
+      }
+
+      .slider-scrollbar .scrollbar-thumb:active {
+        cursor: grabbing;
+        height: 8px;
+        top: -2px;
+      }
+
+      @media (max-width: 1023px) {
+        .slider-wrapper .slide-button {
+          display: none !important;
+        }
+
+        .slider-wrapper .image-list {
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="slider-wrapper">
+        <button id="prev-slide" class="slide-button material-symbols-rounded">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+
+        <!-- CARD -->
+        <div class="image-list">
+          <div id="card-1" class="flip-card" onclick="flipCard('card-1')">
+            <div class="thefont">
+              <img src="../IMG/family-1none.png" alt="fontcard" />
+            </div>
+            <div class="theback">
+              <img src="../IMG/back-card.png" alt="backcard" />
+            </div>
+          </div>
+          <div id="card-2" class="flip-card" onclick="flipCard('card-2')">
+            <div class="thefont">
+              <img src="../IMG/family-2none.png" alt="fontcard" />
+            </div>
+            <div class="theback">
+              <img src="../IMG/back-card.png" alt="backcard" />
+            </div>
+          </div>
+          <div id="card-3" class="flip-card" onclick="flipCard('card-3')">
+            <div class="thefont">
+              <img src="../IMG/fontcard-03.png" alt="fontcard" />
+            </div>
+            <div class="theback">
+              <img src="../IMG/backcard-03.png" alt="backcard" />
+            </div>
+          </div>
+          <div id="card-4" class="flip-card" onclick="flipCard('card-4')">
+            <div class="thefont">
+              <img src="../IMG/fontcard-04.png" alt="fontcard" />
+            </div>
+            <div class="theback">
+              <img src="../IMG/backcard-04.png" alt="backcard" />
+            </div>
+          </div>
+        </div>
+
+        <button id="next-slide" class="slide-button material-symbols-rounded">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="slider-scrollbar">
+        <div class="scrollbar-track">
+          <div class="scrollbar-thumb"></div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Flip card effect on click
+      function flipCard(cardId) {
+        var card = document.getElementById(cardId);
+        card.classList.toggle("flipped");
+      }
+
+      const initSlider = () => {
+        const imageList = document.querySelector(".slider-wrapper .image-list");
+        const sliderButtons = document.querySelectorAll(".slider-wrapper .slide-button");
+        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
+
+        // Drag-to-scroll functionality
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        imageList.addEventListener("mousedown", (e) => {
+          isDragging = true;
+          startX = e.pageX - imageList.offsetLeft;
+          scrollLeft = imageList.scrollLeft;
+          imageList.style.cursor = "grabbing";
+        });
+
+        imageList.addEventListener("mouseleave", () => {
+          isDragging = false;
+          imageList.style.cursor = "grab";
+        });
+
+        imageList.addEventListener("mouseup", () => {
+          isDragging = false;
+          imageList.style.cursor = "grab";
+        });
+
+        imageList.addEventListener("mousemove", (e) => {
+          if (!isDragging) return;
+          e.preventDefault();
+          const x = e.pageX - imageList.offsetLeft;
+          const walk = (x - startX) * 2;
+          imageList.scrollLeft = scrollLeft - walk;
+        });
+      };
+
+      window.addEventListener("load", initSlider);
+    </script>
+  </body>
+</html>

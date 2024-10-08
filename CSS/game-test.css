@@ -139,7 +139,7 @@ button {
 }
 
 @media(max-width: 400px) {
-    .header .sexer-navbar-sidebar {
+    .header .sexer-nav bar-sidebar {
         width: 100%;
     }
 }
@@ -227,22 +227,30 @@ button {
     align-items: center;
     justify-content: center;
     background-color: red;
+    position: relative;
     margin: auto;
 }
 
 .sexer-card-wrapper {
     width: 990px;
-    height: fit-content;
-    min-height: 100vh;
-    position: relative;
-    display: flex;
+    height: 340px;
     justify-content: center;
     align-items: center;
-    perspective: 1000px;
     background-color: #FFD361;
     margin: auto;
     gap: 40px;
 } 
+
+.sexer-card-wrapper .flip-card {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.sexer-card-wrapper .flip-card > img .image-item {
+    object-fit: cover;
+    width: 189px;
+    height: 340px;
+}
 
 .sexer-card-wrapper > .thefont img {
     width: 340px;
