@@ -1,18 +1,38 @@
+*,
+*:before *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
-    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-        "Source Han Sans CN", sans-serif;
+    --pink: #F285B6;
+    --green: #16B250;
+    --blue: #4370B7;
+    --yellow: #FDD811;
+    --gray: #EEEDE8;
+    --black: #333333;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--gray);
+    background-size: cover;
+    font-family: 'Matahari', 'Nunito', sans-serif;
+
 }
 
 .main-container {
+    width: 100% !important;
+    margin: 0 !important;
+    height: fit-content;
+    position: relative;
     overflow: hidden;
 }
 
-.main-container,
-.main-container * {
-    box-sizing: border-box;
-}
 
 input,
 select,
@@ -24,7 +44,7 @@ button {
 .main-container {
     position: relative;
     width: 1440px;
-    height: 3394px;
+    height: auto;
     margin: 0 auto;
     background: #eeede8;
     overflow: hidden;

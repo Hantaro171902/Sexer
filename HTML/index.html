@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/home.css" />
+    <link rel="stylesheet" href="../CSS/fonts.css" />
+    <!-- JS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+		<!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- <script src="../JS/script.js" defer></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  </head>
+  <body>
+    <!-- Section 1 -->
+    <div class="main-container">
+      <!-- Navbar -->
+      <nav class="header">
+        <ul class="sexer-navbar-sidebar">
+          <li onclick="hideSidebar()">
+            <a href="#"><i class="fa-solid fa-xmark"></i></a>
+          </li>
+          <li><a href="../HTML/index.html">HOME</a></li>
+          <li><a href="#game">GAME</a></li>
+          <li><a href="#contact">ABOUT US</a></li>
+        </ul>
+
+        <ul>
+          <li>
+            <a href="../html/index.html">
+              <img class="logo-sexer-text" src="../assets/Sexer-logo.svg"
+            /></a>
+          </li>
+          <li class="hideonMobile">
+            <a id="nav-text" href="../HTML/index.html">HOME</a>
+          </li>
+          <li class="hideonMobile"><a id="nav-text" href="#game">GAME</a></li>
+          <li class="hideonMobile">
+            <a id="nav-text" href="#contact">ABOUT US</a>
+          </li>
+
+          <li class="btn-menu" onclick="showSidebar()">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Introduction -->
+      <section id="introduction" class="sexer-intro">
+        <div class="sexer-cards">
+          <img class="img-fluid" src="../IMG/intro-card1.png" alt="intro-card">
+          <img class="img-fluid" src="../IMG/intro-card2.png" alt="intro-card">
+          <img class="img-fluid" src="../IMG/intro-card3.png" alt="intro-card">
+          <img class="img-fluid" src="../IMG/intro-card4.png" alt="intro-card">
+        </div>
+        <div class="intro-content">
+          <h1>GAME GIÁO DỤC GIỚI TÍNH CHO TRẺ EM ĐẶC BIỆT</h1>
+          <p>Trong mỗi chúng ta điều là những hạt giống được tưới nước chăm sóc,
+            giống như việc trẻ em được nhận sự ấm áp như những tia nắng từ gia đình
+            và giáo dục từ nhà trường, giống như một bông hoa nhờ tưới nước quang
+            hợp mà lớn lên phát triển mỗi ngày. Qua đó các bạn có thêm kiến thức về
+            những bài học giáo dục giới tính Điều này thể hiện sự nhạy bén, quan tâm
+            và tôn trọng với những nhu cầu đặc biệt cho các bạn, giúp các bạn có thể
+            nhận thức và phát triển lành mạnh.”</p>
+
+          <a href="#">
+						<button class="btn-play">PLAY</button>
+					</a>	
+        </div>
+      </section>
+
+      <!-- Slogan -->
+      <section class="slogan"><span class="pink">“se xẻ” </span
+        ><span>mong muốn là sự kết nối, chia sẻ của giáo viên, quan tâm của gia
+          đình, và biết yêu thương bản thân trong hành trình giáo dục giới
+          tính</span
+      ></section>
+
+      <!-- Photo -->
+      <section class="sexer-gallery">
+        <img class="photo-1" src="../IMG/img-kid.png" alt="">
+        <img class="photo-2" src="../IMG/img-kid1.png" alt="">
+        <img class="photo-3" src="../IMG/img-kid2.png" alt="">
+        <img class="icon-flower" src="../Assets/icon-flower.svg" alt="">
+        <img class="icon-sun" src="../Assets/icon-sun.svg" alt="">
+        <img class="icon-tree" src="../Assets/icon-tree.svg" alt="">
+      </section>
+
+      <!-- What people saying  -->
+      <section class="sexer-review">
+      <div class="container">
+        <h1>WHAT PEOPLE SAYING</h1>
+        <div class="wrapper">
+          <!-- Teacher -->
+          <div class="icon">
+            <div class="circle">
+              <img src="../IMG/img-thay-dien.png" alt="image" />
+            </div>
+            <div class="people-meaning">
+              <h3>
+                Thầy Lương Minh Diễn
+              </h3>
+              <p class="addition">Giáo viên trường dạy trẻ khuyết tật thành phố Cần Thơ</p>
+              <p class="people-explain">
+                Một dự án sáng tạo và hình ảnh bắt mắt. Phù hợp với trẻ em và dễ dàng tiếp cận với các trẻ đặc biệt. 
+              </p>
+            </div>
+          </div>
+          <!-- Kid -->
+          <div class="icon">
+            <div class="circle">
+              <img src="../IMG/img-nhom-tre.png" alt="image" />
+            </div>
+            <div class="people-meaning">
+              <h3>
+                Nhóm trẻ em trường khuyết tật thành phố Cần Thơ
+              </h3>
+              <p class="people-explain">Tụi em có thể hiểu biết thêm về kỹ năng bảo vệ bản thân và thêm
+              nhiều kiến thức về giáo dục giới tính qua những hình ảnh thú
+              vị</p>
+            </div>
+          </div>
+          <!-- Stranger -->
+          <div class="icon">
+            <div class="circle">
+              <img src="../IMG/img-trang.png" alt="image" />
+            </div>
+            <div class="people-meaning">
+              <h3>Tranger</h3>
+              <p class="addition">Nguyễn Minh Trang (Tranger) Founder of SEBT ( Sex education by Trang)</p>
+              <p class="people-explain">Một dự án sáng tạo và hình ảnh bắt mắt. Phù hợp với trẻ em và dễ
+              dàng tiếp cận với các trẻ đặc biệt.</p>
+            </div>
+          </div>
+        </div>
+       </div>
+       
+      </section>
+
+
+    </div>
+
+   
+      <div class="rectangle-7">
+        <span class="what-people-saying">WHAT PEOPLE SAYING</span>
+        <div class="flex-row">
+          <div class="ellipse"></div>
+          <div class="ellipse-8"></div>
+          <div class="ellipse-9"></div>
+          <span class="nhom-tre-em"
+            ><br />Nhóm trẻ em trường khuyết tật thành phố Cần Thơ<br
+          /></span>
+          <div class="thay-luong-minh-dien">
+            <span class="thay-luong-minh-dien-a"
+              >Thầy Lương Minh Diễn<br /></span
+            ><span class="giao-vien-truong"
+              >Giáo viên trường dạy trẻ khuyết tật thành phố Cần Thơ</span
+            >
+          </div>
+          <span class="tranger">Tranger</span
+          ><span class="self-protection-skills"
+            >Tụi em có thể hiểu biết thêm về kỹ năng bảo vệ bản thân và thêm
+            nhiều kiến thức về giáo dục giới tính qua những hình ảnh thú
+            vị</span
+          ><span class="overview"
+            >Nào bà ok tui mới để dô nha nhưng để vô cho bà xem cái tổng
+            quan</span
+          ><span class="creative-project"
+            >Một dự án sáng tạo và hình ảnh bắt mắt. Phù hợp với trẻ em và dễ
+            dàng tiếp cận với các trẻ đặc biệt.
+          </span>
+        </div>
+      </div>
+      <div class="rectangle-b"></div>
+      <span class="gender-education-game"
+        >GAME GIÁO DỤC GIỚI TÍNH <br />CHO TRẺ EM ĐẶC BIỆT</span
+      >
+      <div class="rectangle-c"></div>
+      <span class="seed-care"
+        >Trong mỗi chúng ta điều là những hạt giống được tưới nước chăm sóc,
+        giống như việc trẻ em được nhận sự ấm áp như những tia nắng từ gia đình
+        và giáo dục từ nhà trường, giống như một bông hoa nhờ tưới nước quang
+        hợp mà lớn lên phát triển mỗi ngày. Qua đó các bạn có thêm kiến thức về
+        những bài học giáo dục giới tính Điều này thể hiện sự nhạy bén, quan tâm
+        và tôn trọng với những nhu cầu đặc biệt cho các bạn, giúp các bạn có thể
+        nhận thức và phát triển lành mạnh.”</span
+      >
+      <div class="rectangle-d"></div>
+      <div class="rectangle-e"></div>
+      <div class="rectangle-f"><button class="button-play">PLAY</button></div>
+      <div class="rectangle-10"></div>
+      <div class="icon-sun"></div>
+      <div class="rectangle-11"><div class="dscf"></div></div>
+      <div class="icon-flower"></div>
+      <div class="dscf-12"></div>
+      <div class="icon-tree"></div>
+    </div>
+    <!-- Generated by Codia AI - https://codia.ai/ -->
+  </body>
+</html>

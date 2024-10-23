@@ -1,17 +1,35 @@
+*,
+*:before *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
-    --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-        "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-        "Source Han Sans CN", sans-serif;
+    --pink: #F285B6;
+    --green: #16B250;
+    --blue: #4370B7;
+    --yellow: #FDD811;
+    --gray: #EEEDE8;
+    --black: #333333;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+    background-color: var(--gray);
+    /* background-size: cover; */
+    font-family: 'Matahari', 'Nunito', sans-serif;
 }
 
 .main-container {
+    width: 100% !important;
+    margin: 0 !important;
+    height: fit-content;
+    position: relative;
     overflow: hidden;
-}
-
-.main-container,
-.main-container * {
-    box-sizing: border-box;
 }
 
 input,
@@ -21,297 +39,325 @@ button {
     outline: 0;
 }
 
-.main-container {
-    position: relative;
-    width: 1440px;
-    height: 4177px;
-    margin: 0 auto;
-    background: #eeede8;
-    overflow: hidden;
+/* Navbar */
+.header {
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    background-color: var(--gray);
+    box-shadow: 3px 3px 5px rgba(87, 88, 87, 0.726);
+    z-index: 1000;
 }
 
-.rectangle {
-    position: relative;
-    width: 1440px;
-    height: 119px;
-    margin: 0 0 0 0;
-    z-index: 5;
+.header ul {
+    width: 100%;
+    list-style: none;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.frame {
-    position: absolute;
-    width: 4.03%;
-    height: 52.94%;
-    top: 23.53%;
-    left: 5.83%;
-    z-index: 9;
-    overflow: hidden;
+.header li {
+    height: 100px;
 }
 
-.flex-column-bb {
-    position: absolute;
-    width: 46.43%;
+.header ul li a {
+    font-family: 'Matahari';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
     height: 100%;
-    top: -0.01%;
-    left: 53.58%;
-    z-index: 14;
-}
-
-.vector {
-    position: relative;
-    width: 26.407px;
-    height: 25.569px;
-    margin: 0 0 0 0;
-    background: url(./assets/images/cdbae038-696d-4377-9aa6-1fd1ec4f975d.png) no-repeat center;
-    background-size: 100% 100%;
-    z-index: 11;
-}
-
-.vector-1 {
-    position: relative;
-    width: 7.199px;
-    height: 9.352px;
-    margin: 1.576px 0 0 10.795px;
-    background: url(./assets/images/7bc284e4-6ea4-4f0f-af01-a0c30408af03.png) no-repeat center;
-    background-size: 100% 100%;
-    z-index: 14;
-}
-
-.vector-2 {
-    position: relative;
-    width: 26.407px;
-    height: 25.569px;
-    margin: 0.93px 0 0 0.52px;
-    background: url(./assets/images/a3354469-11dd-458d-9779-60c67dd9d977.png) no-repeat center;
-    background-size: 100% 100%;
-    z-index: 12;
-}
-
-.flex-column-ade {
-    position: absolute;
-    width: 47.71%;
-    height: 97.39%;
-    top: 1.57%;
-    left: 0;
-    z-index: 13;
-}
-
-.vector-3 {
-    position: relative;
-    width: 27.564px;
-    height: 24.911px;
-    margin: 0 0 0 0.11px;
-    background: url(./assets/images/49bc9d00-c48f-4458-8fd8-2a700785745e.png) no-repeat center;
-    background-size: 100% 100%;
-    z-index: 10;
-}
-
-.vector-4 {
-    position: relative;
-    width: 27.029px;
-    height: 24.554px;
-    margin: 11.889px 0 0 0;
-    background: url(./assets/images/abce598b-0ad9-4b53-bc8e-a10222a45e21.png) no-repeat center;
-    background-size: 100% 100%;
-    z-index: 13;
-}
-
-.about-us {
+    padding: 0px 100px;
+    align-items: center;
+    text-decoration: none;
     display: flex;
+    color: var(--black);
+}
+
+
+.header ul li a:hover {
+    color: var(--pink);
+}
+
+/* .header a.active {
+    color: #B5D945;
+} */
+
+.header li:first-child {
+    margin-right: auto;
+}
+
+
+.header li:last-child {
+    margin-left: auto;
+}
+
+.logo-sexer-text {
+    height: 50px;
+    width: fit-content;
+    src: url(../assets/Sexer-logo.svg);
+}
+
+/* Navbar Sidebar */
+.header .sexer-navbar-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    background-color: #fdfdfd;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    position: absolute;
-    height: 20.17%;
-    top: 42.02%;
-    left: 86.94%;
-    color: #333333;
-    font-family: Matahari, var(--default-font-family);
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 8;
 }
 
-.home-5 {
+.header .sexer-navbar-sidebar li {
+    width: 100%;
+}
+
+.header .sexer-navbar-sidebar a {
+    width: 100%;
+}
+
+.header .btn-menu {
+    display: none;
+}
+
+@media(max-width: 1100px) {
+    .header .hideonMobile {
+        display: none;
+    }
+
+    .header .btn-menu {
+        display: block;
+    }
+}
+
+@media(max-width: 400px) {
+    .header .sexer-nav bar-sidebar {
+        width: 100%;
+    }
+}
+
+/* Section: Introduction */
+.sexer-intro {
+    width: 100%;
+    min-height: 100vh;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 20.17%;
-    top: 42.02%;
-    left: 59.03%;
-    color: #f285b6;
-    font-family: Matahari, var(--default-font-family);
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 6;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    background-color: var(--gray);
+    padding: 80px 120px;
+    /* margin: 80px 120px; */
 }
 
-.game {
+.sexer-intro .sexer-cards {
+    width: fit-content;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Creates three equal columns */
+    grid-gap: 10px;
+
+    /* Space between grid items */
+}
+
+.intro-content {
+    width: 654px;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: absolute;
-    height: 20.17%;
-    top: 42.02%;
-    left: 73.06%;
-    color: #333333;
-    font-family: Matahari, var(--default-font-family);
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: left;
-    white-space: nowrap;
-    z-index: 7;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 20px;
 }
 
-.se-xe {
-    position: relative;
-    width: 1300px;
-    height: 122px;
-    margin: 731px 0 0 70px;
-    font-family: Inter, var(--default-font-family);
-    font-size: 24px;
+.intro-content h1 {
+    font-family: 'Nunito';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 36px;
+    color: var(--pink);
+}
+
+.intro-content p {
+    font-family: 'Matahari';
     font-weight: 400;
-    line-height: 29.045px;
-    text-align: center;
+    font-style: normal;
+    line-height: 25px;
+    font-size: 21px;
+    text-align: justify;
+    text-justify: inter-word;
+    color: var(--black);
 }
 
-.se-xe-6 {
-    position: relative;
-    color: #f285b6;
-    font-family: Nunito, var(--default-font-family);
-    font-size: 30px;
+.intro-content .btn-play {
+    font-family: 'Nunito';
+    width: 196px;
+    height: 70px;
+    background-color: var(--yellow);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    color: var(--black);
+    padding: 10px 20px;
+    border: solid black 2px;
+    border-radius: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.slogan {
+    font-family: 'Nunito';
     font-weight: 900;
-    line-height: 40.92px;
-    text-align: center;
-}
-
-.mong-muon-la-su-ket-noi {
-    position: relative;
-    color: #16b250;
-    font-family: Nunito, var(--default-font-family);
+    font-style: normal;
+    color: var(--green);
+    padding: 80px 120px;
     font-size: 30px;
-    font-weight: 900;
-    line-height: 40.92px;
+    justify-content: center;
     text-align: center;
+    background-color: var(--gray);
 }
 
-.rectangle-7 {
+.slogan .pink {
+    color: var(--pink);
+}
+
+/* Section: Gallery */
+.sexer-gallery {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--gray);
+    padding: 60px;
+}
+
+.sexer-gallery .photo-2 {
+    margin-left: 20px;
+}
+
+.sexer-gallery .photo-3 {
+    margin-left: 330px;
+    margin-top: 20px;
+}
+
+.sexer-gallery .icon-flower {
     position: relative;
-    width: 1298px;
-    height: 668px;
-    margin: 1108px 0 0 72px;
-    font-size: 0px;
-    border: 2px solid #000000;
+    z-index: 2;
+    right: 650px;
+    bottom: 300px;
+}
+
+.sexer-gallery .icon-tree {
+    z-index: 4;
+    position: relative;
+    right: 300px;
+}
+
+.sexer-gallery .icon-sun {
+    width: 189px;
+    height: 189px;
+    position: relative;
     z-index: 3;
-    overflow: visible auto;
+    bottom: 750px;
+    right: 100px;
+
+}
+
+/* Section: What people saying? */
+.sexer-review {
+    min-height: 100vh;
+    padding: 20px 80px;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--gray);
+}
+
+.sexer-review .container {
+    width: 1298px;
+    height: 640px;
+    border: solid 2px black;
     border-radius: 15px;
 }
 
-.what-people-saying {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    position: relative;
-    width: 548px;
-    height: 64px;
-    margin: 45px 0 0 379px;
-    color: #000000;
-    font-family: Nunito, var(--default-font-family);
+.sexer-review .container h1 {
+    font-family: 'Nunito';
     font-size: 47px;
     font-weight: 900;
-    line-height: 64px;
-    text-align: center;
-    white-space: nowrap;
-    z-index: 15;
+    padding: 40px 0;
 }
 
-.flex-row {
-    position: relative;
-    width: 1170px;
-    height: 407px;
-    margin: 90px 0 0 78px;
-    z-index: 43;
-}
-
-.ellipse {
-    position: absolute;
-    width: 204px;
-    height: 204px;
-    top: 0;
-    left: 63px;
-    background: url(./assets/images/d13355b7-30b8-45bc-9c5c-8b4b5709f8f4.png) no-repeat center;
-    background-size: cover;
-    z-index: 27;
-    border-radius: 50%;
-}
-
-.ellipse-8 {
-    position: absolute;
-    width: 204px;
-    height: 204px;
-    top: 0;
-    left: 483px;
-    background: url(./assets/images/ef11f5f7-969a-4ec6-8845-46d8c09eb3ae.png) no-repeat center;
-    background-size: cover;
-    z-index: 28;
-    border-radius: 50%;
-}
-
-.ellipse-9 {
-    position: absolute;
-    width: 204px;
-    height: 204px;
-    top: 0;
-    left: 873px;
-    background: url(./assets/images/80a83d8a-1c9d-4c41-aad1-c962f4e8600b.png) no-repeat center;
-    background-size: cover;
-    z-index: 41;
-    border-radius: 50%;
-}
-
-.nhom-tre-em {
+.sexer-review .container .wrapper {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+
+.wrapper .icon {
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+    height: 416px;
+    margin: 0 auto;
+    box-sizing: border-box;
     justify-content: center;
-    position: absolute;
-    width: 347px;
-    height: 147px;
-    top: 172px;
-    left: 433px;
-    color: #333333;
-    font-family: Nunito, var(--default-font-family);
-    font-size: 25px;
-    font-weight: 900;
-    line-height: 34.1px;
-    text-align: center;
-    z-index: 30;
+    align-items: center;
 }
 
-.thay-luong-minh-dien {
-    position: absolute;
-    width: 335px;
-    height: 80px;
-    top: 213px;
-    left: 13px;
-    font-family: Matahari, var(--default-font-family);
-    font-size: 21px;
+
+.icon .circle {
+    width: 204px;
+    height: 204px;
+    margin: auto;
+}
+
+.icon .people-meaning {
+    width: 360px;
+    height: 416px;
+    text-align: center;
+    justify-content: center;
+    display: block;
+    margin: auto;
+}
+
+.people-meaning h3 {
+    font-family: 'Nunito';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.people-meaning .addition, .people-explain {
+    font-family: 'Matahari';
     font-weight: 400;
+    font-size: 21px;
     line-height: 25px;
+    text-align: justify;
     text-align: center;
-    z-index: 29;
+    margin: 0;
+    padding: 0;
+    color: var(--black);
 }
 
-.thay-luong-minh-dien-a {
-    position: relative;
-    color: #333333;
-    font-family: Nunito, var(--default-font-family);
-    font-size: 25px;
-    font-weight: 900;
+.people-meaning .people-explain {
+    padding: 30px;
 }
+
+
+@media (max-width: 768px) {
+    .sexer-review .icon {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
