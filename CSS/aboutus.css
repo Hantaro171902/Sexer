@@ -214,7 +214,7 @@ h3 {
 .wrapper .content {
     width: 859px;
     height: 345px;
-    justify-content: center;
+    text-align: justify;
     text-justify: inter-word;
 }
 
@@ -238,18 +238,21 @@ h3 {
     gap: 40px;
 }
 
-.wrapper {
+.sexer-teacher .wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.wrapper img {
+.sexer-teacher .wrapper .flower {
+    display: flex;
+    justify-content: end;
+}
+
+.sexer-teacher .wrapper img {
     width: 127px;
     height: 129px;
-    display: flex;
-    justify-content: flex-end;
 }
 
 .wrapper p,

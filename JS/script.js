@@ -9,40 +9,46 @@ function hideSidebar() {
 }
 
 // Flip card effect on click
-var clickCount = 0;
-
 function flipCard(cardId) {
   var card = document.getElementById(cardId);
-  if (clickCount % 2 === 0) {
-    // Check if it's an evenS click
-    card.style.transform = "rotateY(180deg)";
-  } else {
-    // Odd click
-    card.style.transform = "rotateY(0deg)";
-  }
-  clickCount++;
-  console.log(clickCount);
+  card.classList.toggle("flipped");
 }
 
+// Initialize slider functionality for each .image-list container
+const initSlider = (imageList) => {
+  let isDragging = false;
+  let startX;
+  let scrollLeft;
 
-// script.js
-let slideIndex = 0;
-showSlides(slideIndex);
+  // Add drag-to-scroll functionality to the specific image list
+  imageList.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX - imageList.offsetLeft;
+    scrollLeft = imageList.scrollLeft;
+    imageList.style.cursor = "grabbing";
+  });
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
+  imageList.addEventListener("mouseleave", () => {
+    isDragging = false;
+    imageList.style.cursor = "grab";
+  });
 
-function showSlides(n) {
-  let slides = document.getElementsByClassName("slide");
-  if (n >= slides.length) {
-    slideIndex = 0;
-  }
-  if (n < 0) {
-    slideIndex = slides.length - 1;
-  }
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex].style.display = "block";
-}
+  imageList.addEventListener("mouseup", () => {
+    isDragging = false;
+    imageList.style.cursor = "grab";
+  });
+
+  imageList.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - imageList.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scrolling speed by changing multiplier
+    imageList.scrollLeft = scrollLeft - walk;
+  });
+};
+
+// Loop through each .image-list container and initialize slider for each
+window.addEventListener("load", () => {
+  const imageLists = document.querySelectorAll(".slider-wrapper .image-list");
+  imageLists.forEach(initSlider); // Apply initSlider to each imageList
+});

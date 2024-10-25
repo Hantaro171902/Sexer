@@ -29,20 +29,59 @@
 
       .main-container {
         flex-direction: column; /* Stack containers vertically */
-        gap: 20px; /* Gap between containers */
+        gap: 40px; /* Gap between containers */
         width: 100%;
-        max-width: 1200px; /* Limit max width of containers */
+        align-items: center;
+        padding: 80px 120px;
+        max-width: 1440px; /* Limit max width of containers */
       }
 
       .container {
-        max-width: 1200px;
+        max-width: 1440px;
         width: 100%;
+        background-color: green;
+        border: solid black 2px;
+        border-radius: 20px;
+      }
+
+      .card-holder {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 1;
+        margin-top: -400px;
+        margin-left: 940px;
       }
 
       .slider-wrapper {
         position: relative;
         display: flex;
         justify-content: center;
+        padding: 40px 20px;
+        
+      }
+
+      .slider-wrapper {
+        overflow: hidden;
+        max-width: 1000px; /* Approximately the width for five cards plus gaps */
+      }
+
+      .image-list {
+        display: flex;
+        gap: 20px; /* Space between cards */
+        overflow-x: auto; /* Enable horizontal scroll for dragging */
+        width: calc((189px * 5) + (20px * 4)); /* Five cards with gaps */
+        scrollbar-width: none; /* Hide scrollbar for a cleaner look */
+      }
+
+      .image-list::-webkit-scrollbar {
+        display: none; /* Hide scrollbar in WebKit browsers */
+      }
+
+      .flip-card {
+        width: 189px;
+        height: 340px;
+        flex: 0 0 auto; /* Prevent cards from shrinking */
       }
 
       .slider-wrapper .slide-button {
@@ -86,7 +125,7 @@
 
       /* Flip Card Effect */
       .image-list .flip-card {
-        perspective: 1000px; 
+        perspective: 1000px;
         width: 189px;
         height: 340px;
         cursor: pointer;
@@ -174,52 +213,124 @@
 
           <!-- CARD -->
           <div class="image-list">
-            <div id="family-card-1" class="flip-card" onclick="flipCard('family-card-1')">
+            <div
+              id="family-card-1"
+              class="flip-card"
+              onclick="flipCard('family-card-1')"
+            >
               <div class="thefont">
-                <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
               </div>
               <div class="theback">
-                <img src="../IMG/family-1none.png" alt="backcard" class="image-item"/>
+                <img
+                  src="../IMG/family-1none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
               </div>
             </div>
-            <div id="family-card-2" class="flip-card" onclick="flipCard('family-card-2')">
+            <div
+              id="family-card-2"
+              class="flip-card"
+              onclick="flipCard('family-card-2')"
+            >
               <div class="thefont">
-                <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
               </div>
               <div class="theback">
-                <img src="../IMG/family-2none.png" alt="backcard" class="image-item"/>
+                <img
+                  src="../IMG/family-2none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
               </div>
             </div>
-            <div id="family-card-3" class="flip-card" onclick="flipCard('family-card-3')">
+            <div
+              id="family-card-3"
+              class="flip-card"
+              onclick="flipCard('family-card-3')"
+            >
               <div class="thefont">
-                <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
               </div>
               <div class="theback">
-                <img src="../IMG/family-3none.png" alt="backcard" class="image-item"/>
+                <img
+                  src="../IMG/family-3none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
               </div>
             </div>
-            <div id="family-card-4" class="flip-card" onclick="flipCard('family-card-4')">
+            <div
+              id="family-card-4"
+              class="flip-card"
+              onclick="flipCard('family-card-4')"
+            >
               <div class="thefont">
-                <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
               </div>
               <div class="theback">
-                <img src="../IMG/family-4none.png" alt="backcard" class="image-item"/>
+                <img
+                  src="../IMG/family-4none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
               </div>
             </div>
-            <div id="family-card-5" class="flip-card" onclick="flipCard('family-card-5')">
+            <div
+              id="family-card-5"
+              class="flip-card"
+              onclick="flipCard('family-card-5')"
+            >
               <div class="thefont">
-                <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
               </div>
               <div class="theback">
-                <img src="../IMG/family-5none.png" alt="backcard" class="image-item"/>
+                <img
+                  src="../IMG/family-5none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
               </div>
             </div>
-            <div id="family-card-6" class="flip-card" onclick="flipCard('family-card-6')">
+            <div
+              id="family-card-6"
+              class="flip-card"
+              onclick="flipCard('family-card-6')"
+            >
               <div class="thefont">
-                <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
               </div>
               <div class="theback">
-                <img src="../IMG/family-6none.png" alt="backcard" class="image-item"/>
+                <img
+                  src="../IMG/family-6none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
               </div>
             </div>
           </div>
@@ -228,109 +339,230 @@
             <i class="fa fa-chevron-right" aria-hidden="true"></i>
           </button> -->
         </div>
+        <img class="card-holder" src="../IMG/card-holder-sun.png" alt="">
 
-      <div class="slider-scrollbar">
-        <div class="scrollbar-track">
-          <div class="scrollbar-thumb"></div>
+        <div class="slider-scrollbar">
+          <div class="scrollbar-track">
+            <div class="scrollbar-thumb"></div>
+          </div>
         </div>
       </div>
-    </div>
 
-
-    <div class="container">
-      <div class="slider-wrapper">
-        <!-- <button id="prev-slide" class="slide-button material-symbols-rounded">
+      <!-- Container 2 -->
+      <div class="container">
+        <div class="slider-wrapper">
+          <!-- <button id="prev-slide" class="slide-button material-symbols-rounded">
           <i class="fa fa-chevron-left" aria-hidden="true"></i>
         </button> -->
 
-        <!-- CARD -->
-        <div class="image-list">
-          <div id="school-card-1" class="flip-card" onclick="flipCard('school-card-1')">
-            <div class="thefont">
-              <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
+          <!-- CARD -->
+          <div class="image-list">
+            <div
+              id="school-card-1"
+              class="flip-card"
+              onclick="flipCard('school-card-1')"
+            >
+              <div class="thefont">
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
+              </div>
+              <div class="theback">
+                <img
+                  src="../IMG/school-1none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
+              </div>
             </div>
-            <div class="theback">
-              <img src="../IMG/school-1none.png" alt="backcard" class="image-item"/>
+            <div
+              id="school-card-2"
+              class="flip-card"
+              onclick="flipCard('school-card-2')"
+            >
+              <div class="thefont">
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
+              </div>
+              <div class="theback">
+                <img
+                  src="../IMG/school-2none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
+              </div>
+            </div>
+            <div
+              id="school-card-3"
+              class="flip-card"
+              onclick="flipCard('school-card-3')"
+            >
+              <div class="thefont">
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
+              </div>
+              <div class="theback">
+                <img
+                  src="../IMG/school-3none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
+              </div>
+            </div>
+            <div
+              id="school-card-4"
+              class="flip-card"
+              onclick="flipCard('school-card-4')"
+            >
+              <div class="thefont">
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
+              </div>
+              <div class="theback">
+                <img
+                  src="../IMG/school-4none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
+              </div>
+            </div>
+            <div
+              id="school-card-5"
+              class="flip-card"
+              onclick="flipCard('school-card-5')"
+            >
+              <div class="thefont">
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
+              </div>
+              <div class="theback">
+                <img
+                  src="../IMG/School-5none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
+              </div>
+            </div>
+            <div
+              id="school-card-6"
+              class="flip-card"
+              onclick="flipCard('school-card-6')"
+            >
+              <div class="thefont">
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
+              </div>
+              <div class="theback">
+                <img
+                  src="../IMG/school-6none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
+              </div>
+            </div>
+            <div
+              id="school-card-7"
+              class="flip-card"
+              onclick="flipCard('school-card-7')"
+            >
+              <div class="thefont">
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
+              </div>
+              <div class="theback">
+                <img
+                  src="../IMG/School-7none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
+              </div>
+            </div>
+            <div
+              id="school-card-8"
+              class="flip-card"
+              onclick="flipCard('school-card-8')"
+            >
+              <div class="thefont">
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
+              </div>
+              <div class="theback">
+                <img
+                  src="../IMG/School-8none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
+              </div>
+            </div>
+            <div
+              id="school-card-9"
+              class="flip-card"
+              onclick="flipCard('school-card-9')"
+            >
+              <div class="thefont">
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
+              </div>
+              <div class="theback">
+                <img
+                  src="../IMG/School-9none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
+              </div>
+            </div>
+            <div
+              id="school-card-10"
+              class="flip-card"
+              onclick="flipCard('school-card-10')"
+            >
+              <div class="thefont">
+                <img
+                  src="../IMG/back-card.png"
+                  alt="fontcard"
+                  class="image-item"
+                />
+              </div>
+              <div class="theback">
+                <img
+                  src="../IMG/School-10none.png"
+                  alt="backcard"
+                  class="image-item"
+                />
+              </div>
             </div>
           </div>
-          <div id="school-card-2" class="flip-card" onclick="flipCard('school-card-2')">
-            <div class="thefont">
-              <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
-            </div>
-            <div class="theback">
-              <img src="../IMG/school-2none.png" alt="backcard" class="image-item"/>
-            </div>
-          </div>
-          <div id="school-card-3" class="flip-card" onclick="flipCard('school-card-3')">
-            <div class="thefont">
-              <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
-            </div>
-            <div class="theback">
-              <img src="../IMG/school-3none.png" alt="backcard" class="image-item"/>
-            </div>
-          </div>
-          <div id="school-card-4" class="flip-card" onclick="flipCard('school-card-4')">
-            <div class="thefont">
-              <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
-            </div>
-            <div class="theback">
-              <img src="../IMG/school-4none.png" alt="backcard" class="image-item"/>
-            </div>
-          </div>
-          <div id="school-card-5" class="flip-card" onclick="flipCard('school-card-5')">
-            <div class="thefont">
-              <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
-            </div>
-            <div class="theback">
-              <img src="../IMG/School-5none.png" alt="backcard" class="image-item"/>
-            </div>
-          </div>
-          <div id="school-card-6" class="flip-card" onclick="flipCard('school-card-6')">
-            <div class="thefont">
-              <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
-            </div>
-            <div class="theback">
-              <img src="../IMG/school-6none.png" alt="backcard" class="image-item"/>
-            </div>
-          </div>
-          <div id="school-card-7" class="flip-card" onclick="flipCard('school-card-7')">
-            <div class="thefont">
-              <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
-            </div>
-            <div class="theback">
-              <img src="../IMG/School-7none.png" alt="backcard" class="image-item"/>
-            </div>
-          </div>
-          <div id="school-card-8" class="flip-card" onclick="flipCard('school-card-8')">
-            <div class="thefont">
-              <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
-            </div>
-            <div class="theback">
-              <img src="../IMG/School-8none.png" alt="backcard" class="image-item"/>
-            </div>
-          </div>
-          <div id="school-card-9" class="flip-card" onclick="flipCard('school-card-9')">
-            <div class="thefont">
-              <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
-            </div>
-            <div class="theback">
-              <img src="../IMG/School-9none.png" alt="backcard" class="image-item"/>
-            </div>
-          </div>
-          <div id="school-card-10" class="flip-card" onclick="flipCard('school-card-10')">
-            <div class="thefont">
-              <img src="../IMG/back-card.png" alt="fontcard" class="image-item"/>
-            </div>
-            <div class="theback">
-              <img src="../IMG/School-10none.png" alt="backcard" class="image-item"/>
-            </div>
-          </div>
-        </div>
 
-        <!-- <button id="next-slide" class="slide-button material-symbols-rounded">
+          <!-- <button id="next-slide" class="slide-button material-symbols-rounded">
           <i class="fa fa-chevron-right" aria-hidden="true"></i>
         </button> -->
-      </div>
+        </div>
 
         <div class="slider-scrollbar">
           <div class="scrollbar-track">
@@ -347,18 +579,13 @@
         card.classList.toggle("flipped");
       }
 
-      const initSlider = () => {
-        const imageList = document.querySelector(".slider-wrapper .image-list");
-        const sliderButtons = document.querySelectorAll(
-          ".slider-wrapper .slide-button"
-        );
-        const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-
-        // Drag-to-scroll functionality
+      // Initialize slider functionality for each .image-list container
+      const initSlider = (imageList) => {
         let isDragging = false;
         let startX;
         let scrollLeft;
 
+        // Add drag-to-scroll functionality to the specific image list
         imageList.addEventListener("mousedown", (e) => {
           isDragging = true;
           startX = e.pageX - imageList.offsetLeft;
@@ -380,12 +607,18 @@
           if (!isDragging) return;
           e.preventDefault();
           const x = e.pageX - imageList.offsetLeft;
-          const walk = (x - startX) * 2;
+          const walk = (x - startX) * 2; // Adjust scrolling speed by changing multiplier
           imageList.scrollLeft = scrollLeft - walk;
         });
       };
 
-      window.addEventListener("load", initSlider);
+      // Loop through each .image-list container and initialize slider for each
+      window.addEventListener("load", () => {
+        const imageLists = document.querySelectorAll(
+          ".slider-wrapper .image-list"
+        );
+        imageLists.forEach(initSlider); // Apply initSlider to each imageList
+      });
     </script>
   </body>
 </html>
