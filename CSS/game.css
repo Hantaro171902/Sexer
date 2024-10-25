@@ -47,7 +47,7 @@ button {
     right: 20px;
     width: 60px;
     height: 60px;
-    background-color: var(--blue);
+    background-color: var(--green);
     color: #fff;
     border-radius: 50%;
     display: flex;
@@ -86,7 +86,7 @@ button {
     /* Removes border */
     outline: none;
     /* Removes outline when button is focused */
-    font-size: 2rem;
+    font-size: 1.5rem;
     /* Adjust font size as needed */
     cursor: pointer;
     /* Makes the button look clickable */
