@@ -175,6 +175,7 @@ h3 {
     flex-direction: column;
     padding: 120px 80px;
     background-color: var(--gray);
+    gap: 40px;
 }
 
 .sexer-aboutus .flower {
@@ -185,7 +186,7 @@ h3 {
 .sexer-aboutus .wrapper {
     display: flex;
     flex-direction: row;
-    gap: 40px;
+    /* gap: 40px; */
 }
 
 .wrapper .title,
@@ -196,23 +197,37 @@ h3 {
     align-items: center;
 }
 
-.title {
-    width: 240px;
+.wrapper .title {
+    width: 280px;
     height: 340px;
+    margin-right: 50px;
+    gap: 80px;
 }
 
-.content {
+.wrapper .title h1 {
+    font-family: 'Nunito';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 47px;
+}
+
+.wrapper .content {
+    width: 859px;
+    height: 345px;
+    justify-content: center;
+    text-justify: inter-word;
+}
+
+.wrapper .content p {
     font-family: 'Matahari';
     font-weight: 400;
     font-style: normal;
     font-size: 21px;
     line-height: 25px;
-    justify-content: center;
-    text-justify: inter-word;
+    text-align: justify;
 }
 
 /* Section: Teacher */
-
 .sexer-teacher {
     width: 100%;
     min-height: 100vh;
@@ -220,10 +235,79 @@ h3 {
     flex-direction: row;
     padding: 120px 80px;
     background-color: var(--gray);
+    gap: 40px;
 }
 
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
+.wrapper img {
+    width: 127px;
+    height: 129px;
+    display: flex;
+    justify-content: flex-end;
+}
 
+.wrapper p,
+b {
+    font-family: 'Nunito';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 30px;
+    color: var(--black);
+    text-align: justify;
+}
+
+.wrapper b {
+    color: var(--green);
+}
+
+.photo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.photo h1 {
+    font-family: 'Nunito';
+    font-weight: 900;
+    font-style: normal;
+    font-size: 47px;
+}
+
+.photo .role {
+    position: relative;
+    top: -100px;
+    left: 20px;
+}
+
+.photo .role p {
+    color: var(--gray);
+    font-family: 'Nunito';
+    font-size: 25px;
+    font-weight: 900;
+    font-style: normal;
+    line-height: 20px;
+}
+
+/* Section: Members */
+.sexer-members {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    padding: 120px 80px;
+    background-color: var(--gray);
+    gap: 40px;
+}
+
+.wrapper {
+    
+}
 
 .rectangle {
     position: relative;
