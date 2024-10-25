@@ -2,7 +2,7 @@
 /* Bold */
 @font-face {
     font-family: 'Neulis';
-    src: url(../fonts/Neulis/Neulis-Black.otf);
+    src: url(./Fonts/Neulis/Neulis-Black.otf);
     font-weight: 900;
     font-style: normal;
 }
@@ -10,7 +10,7 @@
 /* Regular */
 @font-face {
     font-family: 'Neulis';
-    src: url(../fonts/Neulis/Neulis-Regular.otf);
+    src: url(./Fonts/Neulis/Neulis-Regular.otf);
     font-weight: normal;
     font-style: normal;
 }
@@ -18,7 +18,7 @@
 /* Light */
 @font-face {
     font-family: 'Neulis';
-    src: url(../fonts/Neulis/Neulis-Light.otf);
+    src: url(./Fonts/Neulis/Neulis-Light.otf);
     font-weight: 300;
     font-style: normal;
 }
@@ -26,7 +26,7 @@
 /* Italic */
 @font-face {
     font-family: 'Neulis';
-    src: url(../fonts/Neulis/Neulis-Italic.otf);
+    src: url(./Fonts/Neulis/Neulis-Italic.otf);
     font-weight: normal;
     font-style: italic;
 }
@@ -35,14 +35,14 @@
 /* Bold */
 @font-face {
     font-family: 'Matahari';
-    src: url(../fonts/Matahari/Matahari-700Bold.otf);
+    src: url(./Fonts/Matahari/Matahari-700Bold.otf);
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Matahari';
-    src: url(../fonts/Matahari/Matahari-900Black.otf);
+    src: url(./Fonts/Matahari/Matahari-900Black.otf);
     font-weight: 900;
     font-style: normal;
 }
