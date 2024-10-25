@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About Us</title>
+    <!-- LOGO -->
+    <link
+      rel="icon"
+      href="../SEXER-website/Assets/Sexer-logo.svg"
+      type="image/x-icon"
+    />
+
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,6 +39,7 @@
 
     <!-- <script src="../JS/script.js" defer></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="../JS/script.js"></script>
   </head>
   <body>
     <!-- Section 1 -->
@@ -42,8 +50,8 @@
           <li onclick="hideSidebar()">
             <a href="../HTML/index.html"><i class="fa-solid fa-xmark"></i></a>
           </li>
-          <li><a href="../HTML/index.html">HOME</a></li>
-          <li><a href="../HTML/game-test.html">GAME</a></li>
+          <li><a href="../index.html">HOME</a></li>
+          <li><a href="../HTML/game.html">GAME</a></li>
           <li><a href="../HTML/aboutus.html">ABOUT US</a></li>
         </ul>
 
@@ -54,9 +62,11 @@
             /></a>
           </li>
           <li class="hideonMobile">
-            <a id="nav-text" href="../HTML/index.html">HOME</a>
+            <a id="nav-text" href="../index.html">HOME</a>
           </li>
-          <li class="hideonMobile"><a id="nav-text" href="../HTML/game-test.html">GAME</a></li>
+          <li class="hideonMobile">
+            <a id="nav-text" href="../HTML/game.html">GAME</a>
+          </li>
           <li class="hideonMobile">
             <a id="nav-text" href="../HTML/aboutus.html">ABOUT US</a>
           </li>
@@ -69,50 +79,58 @@
 
       <!-- About Us -->
       <section class="sexer-aboutus">
-          <div class="flower">
-            <img src="../Assets/flower.svg" alt="">
+        <div class="flower">
+          <img src="../Assets/flower.svg" alt="" />
+        </div>
+        <div class="wrapper">
+          <div class="title">
+            <h1>ABOUT US</h1>
+            <img class="tree" src="../Assets/tree.svg" alt="" />
           </div>
-          <div class="wrapper">
-            <div class="title">
-              <h1>ABOUT US</h1>
-              <img class="tree" src="../Assets/tree.svg" alt="">
-            </div>
-            <div class="content">
-              <p>Dự án của chúng tôi muốn tập trung đến những trường hợp “đặc biệt”.
-              Chúng tôi muốn có những giải pháp phù hợp để giúp những bạn trẻ đó có
-              cái nhìn tốt về giới hình ảnh thông qua 1 board game, để có thể vừa
-              chơi cùng nhau vừa có thể để thầy cô, ba mẹ hướng dẫn các bạn từ đó
-              tăng cường sự hiểu biết của các bạn về các vấn đề về giới tính.</p>
-              <br>
-              <p>Với tên gọi là Se Xẻ, se trong từ sex education là giáo dục giới
-              tính, còn xẻ là chia ra từng mảnh nhỏ như những mảnh ghép có thể giúp
-              các bạn có thể học được những kiến thức về giáo dục giới tính để có
-              thể vừa hiểu, tôn trọng người khác và có thể bảo vệ bản thân trong
-              những tình cảnh khó khăn. Vậy “se xẻ” tên của dự án có thể được hiểu
-              là sự kết nối, chia sẻ của giáo viên, gia đình, và những trẻ em “đặc
-              biệt” trong hành trình giáo dục giới tính. Điều này thể hiện sự nhạy
-              bén, quan tâm và tôn trọng với những nhu cầu đặc biệt cho các bạn,
-              giúp các bạn có thể nhận thức và phát triển lành mạnh.</p>
-            </div>
+          <div class="content">
+            <p>
+              Dự án của chúng tôi muốn tập trung đến những trường hợp “đặc
+              biệt”. Chúng tôi muốn có những giải pháp phù hợp để giúp những bạn
+              trẻ đó có cái nhìn tốt về giới hình ảnh thông qua 1 board game, để
+              có thể vừa chơi cùng nhau vừa có thể để thầy cô, ba mẹ hướng dẫn
+              các bạn từ đó tăng cường sự hiểu biết của các bạn về các vấn đề về
+              giới tính.
+            </p>
+            <br />
+            <p>
+              Với tên gọi là Se Xẻ, se trong từ sex education là giáo dục giới
+              tính, còn xẻ là chia ra từng mảnh nhỏ như những mảnh ghép có thể
+              giúp các bạn có thể học được những kiến thức về giáo dục giới tính
+              để có thể vừa hiểu, tôn trọng người khác và có thể bảo vệ bản thân
+              trong những tình cảnh khó khăn. Vậy “se xẻ” tên của dự án có thể
+              được hiểu là sự kết nối, chia sẻ của giáo viên, gia đình, và những
+              trẻ em “đặc biệt” trong hành trình giáo dục giới tính. Điều này
+              thể hiện sự nhạy bén, quan tâm và tôn trọng với những nhu cầu đặc
+              biệt cho các bạn, giúp các bạn có thể nhận thức và phát triển lành
+              mạnh.
+            </p>
           </div>
+        </div>
       </section>
 
       <!-- Meet the team -->
       <section class="sexer-teacher">
         <div class="wrapper">
-          <img class="flower" src="../Assets/flower.svg" alt="">
-          <p>Mục tiêu mà nhóm hướng tới là đem lại nụ cười và sự hạnh phúc của
-            trẻ em <b>“đặc biệt”</b> để trẻ có thể hiểu biết về giới tính, có thể bảo vệ bản thân và hiểu
-            được về sự đồng ý, những điều nên hoặc không nên, ranh giới về giới
-            tính, tôn trọng người khác.</p>
+          <img class="flower" src="../Assets/flower.svg" alt="" />
+          <p>
+            Mục tiêu mà nhóm hướng tới là đem lại nụ cười và sự hạnh phúc của
+            trẻ em <b>“đặc biệt”</b> để trẻ có thể hiểu biết về giới tính, có
+            thể bảo vệ bản thân và hiểu được về sự đồng ý, những điều nên hoặc
+            không nên, ranh giới về giới tính, tôn trọng người khác.
+          </p>
         </div>
         <div class="photo">
           <h1>MEET THE TEAM</h1>
-          <img src="../IMG/img-co-ha.png" alt="">
+          <img src="../IMG/img-co-ha.png" alt="" />
           <div class="role">
             <p>Mentor:</p>
             <p>Hồ Nguyễn Ngọc Hà</p>
-          </div> 
+          </div>
         </div>
       </section>
 
@@ -120,17 +138,27 @@
       <section class="sexer-members">
         <div class="wrapper">
           <div class="photo">
-            <img class="img-fluid img-member" src="../IMG/img-trieu-vy.png" alt="">
+            <img
+              class="img-fluid img-member"
+              src="../IMG/img-trieu-vy.png"
+              alt=""
+            />
             <div class="role">
               <p>Graphic Designer:</p>
               <p>Trương Triệu Vy</p>
-            </div> 
+            </div>
             <div class="explain">
-              <p>Vai trò lên ý tưởng và vẽ các nhân vật thẻ bài trong board game</p>
+              <p>
+                Vai trò lên ý tưởng và vẽ các nhân vật thẻ bài trong board game
+              </p>
             </div>
           </div>
           <div class="photo">
-            <img class="img-fluid img-member" src="../IMG/img-hantaro.png" alt="">
+            <img
+              class="img-fluid img-member"
+              src="../IMG/img-hantaro.png"
+              alt=""
+            />
             <div class="role">
               <p>Developer,</p>
               <p>Graphic Designer</p>
@@ -138,43 +166,54 @@
             </div>
             <div class="explain">
               <p>Vai trò lên ý tưởng và thiết kế website</p>
-            </div> 
+            </div>
           </div>
           <div class="photo">
-            <img class="img-fluid img-member" src="../IMG/img-truong-an.png" alt="">
+            <img
+              class="img-fluid img-member"
+              src="../IMG/img-truong-an.png"
+              alt=""
+            />
             <div class="role">
               <p>Graphic Designer:</p>
               <p>Nguyễn Trường An</p>
-            </div> 
+            </div>
           </div>
           <div class="photo">
-            <img class="img-fluid img-member" src="../IMG/img-duy-thanh.png" alt="">
+            <img
+              class="img-fluid img-member"
+              src="../IMG/img-duy-thanh.png"
+              alt=""
+            />
             <div class="role">
               <p>Graphic Designer:</p>
               <p>Nguyễn Duy Thanh</p>
-            </div> 
+            </div>
           </div>
         </div>
 
         <div class="content">
-          <img src="../Assets/icon-tree.svg" alt="">
-          <p>Mục tiêu mà nhóm hướng tới là đem lại nụ cười và sự hạnh phúc của
-            trẻ em <b>"đặc biệt"</b> để trẻ có thể hiểu biết về giới tính, có thể bảo vệ bản thân và hiểu
-            được về sự đồng ý, những điều nên hoặc không nên, ranh giới về giới
-            tính, tôn trọng người khác.</p>
+          <img src="../Assets/icon-tree.svg" alt="" />
+          <p>
+            Mục tiêu mà nhóm hướng tới là đem lại nụ cười và sự hạnh phúc của
+            trẻ em <b>"đặc biệt"</b> để trẻ có thể hiểu biết về giới tính, có
+            thể bảo vệ bản thân và hiểu được về sự đồng ý, những điều nên hoặc
+            không nên, ranh giới về giới tính, tôn trọng người khác.
+          </p>
         </div>
       </section>
 
       <!-- Group photo -->
       <section class="sexer-group">
-        <img class="sun" src="../Assets/icon-sun.svg" alt="">
-        <p><b>"Se xẻ"</b> cũng mong muốn dự án này có thể gây quỹ để giúp những nơi
-        đã và đang nuôi dạy trẻ <b>đặc biệt.</b>  Mang lại giá trị tốt đẹp 
-        lên nụ cười vui tươi trên môi trẻ.</p>
-        <img src="../IMG/img-team.png" alt="">
-        <img class="tree" src="../Assets/icon-tree.svg" alt="">
+        <img class="sun" src="../Assets/icon-sun.svg" alt="" />
+        <p>
+          <b>"Se xẻ"</b> cũng mong muốn dự án này có thể gây quỹ để giúp những
+          nơi đã và đang nuôi dạy trẻ <b>đặc biệt.</b> Mang lại giá trị tốt đẹp
+          lên nụ cười vui tươi trên môi trẻ.
+        </p>
+        <img src="../IMG/img-team.png" alt="" />
+        <img class="tree" src="../Assets/icon-tree.svg" alt="" />
       </section>
     </div>
-
   </body>
 </html>

@@ -1,142 +1,434 @@
-header {
-    background-color: #f285b6;
-    padding: 10px 0;
-}
-
-.navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.navigation .logo img {
-    max-width: 100px;
-}
-
-.navigation .menu ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.navigation .menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.intro {
-    text-align: center;
-    padding: 50px 20px;
-    background-color: #eeede8;
-}
-
-.intro h1 {
-    color: #f285b6;
-    font-size: 36px;
-    font-weight: 900;
-}
-
-.icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.icon {
-    text-align: center;
-}
-
-.icon img {
-    max-width: 100px;
-}
-
-.description {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-}
-
-.slider {
-    position: relative;
-    max-width: 100%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.slider-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    min-width: 100%;
+*,
+*:before *:after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-.slide img {
-    width: 100%;
-    height: auto;
+:root {
+    --pink: #F285B6;
+    --green: #16B250;
+    --blue: #4370B7;
+    --yellow: #FDD811;
+    --gray: #EEEDE8;
+    --black: #333333;
 }
 
-.prev,
-.next {
-    cursor: pointer;
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--gray);
+    background-size: cover;
+    font-family: 'Matahari', 'Nunito', sans-serif;
+
+}
+
+.main-container {
+    width: 100% !important;
+    margin: 0 !important;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+}
+
+input,
+select,
+textarea,
+button {
+    outline: 0;
+}
+
+/* Navbar */
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 120px;
+    background-color: var(--gray);
+    box-shadow: 3px 3px 5px rgba(87, 88, 87, 0.726);
+    z-index: 1000;
+}
+
+.header ul {
+    width: 100%;
+    list-style: none;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header li {
+    height: 100px;
+}
+
+.header ul li a {
+    font-family: 'Matahari';
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    height: 100%;
+    padding: 0px 100px;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+    color: var(--black);
+}
+
+
+.header ul li a:hover {
+    color: var(--pink);
+}
+
+/* .header a.active {
+    color: #B5D945;
+} */
+
+.header li:first-child {
+    margin-right: auto;
+}
+
+
+.header li:last-child {
+    margin-left: auto;
+}
+
+.logo-sexer-text {
+    height: 50px;
+    width: fit-content;
+    src: url(../assets/Sexer-logo.svg);
+}
+
+/* Navbar Sidebar */
+.header .sexer-navbar-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 1000;
+    background-color: #fdfdfd;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.header .sexer-navbar-sidebar li {
+    width: 100%;
+}
+
+.header .sexer-navbar-sidebar a {
+    width: 100%;
+}
+
+.header .btn-menu {
+    display: none;
+}
+
+@media(max-width: 1100px) {
+    .header .hideonMobile {
+        display: none;
+    }
+
+    .header .btn-menu {
+        display: block;
+    }
+}
+
+@media(max-width: 400px) {
+    .header .sexer-nav bar-sidebar {
+        width: 100%;
+    }
+}
+
+.game-intro {
+    width: 100%;
+    min-height: 100vh;
+    padding: 80px 120px;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.game-intro h1 {
+    font-family: 'Nunito';
+    font-size: 47px;
+    font-style: normal;
+    font-weight: 900;
+}
+
+.game-intro .wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .icon {
+    display: flex;
+    width: 208px;
+    height: 372px;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon .circle {
+    width: 157px;
+    height: 157px;
+    margin: auto;
+}
+
+
+.icon p {
+    font-family: 'Matahari';
+    font-size: 21px;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.icon .title-green {
+    color: var(--green);
+}
+
+.icon .title-yellow {
+    color: var(--yellow);
+}
+
+.icon .title-pink {
+    color: var(--pink);
+}
+
+.icon .color-explain {
+    font-family: 'Matahari';
+    font-size: 21px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 25px;
+}
+
+@media (max-width: 768px) {
+    .game-intro .icon {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* Section game explain */
+
+.game-explaining {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 80px 120px;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray);
+    gap: 25px;
+}
+
+.game-explaining p {
+    text-align: center;
+    font-family: 'Matahari';
+    font-size: 21px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 25px;
+}
+
+/* GAME CARDS */
+.sexer-gameplay {
+    flex-direction: column;
+    /* Stack containers vertically */
+    gap: 40px;
+    /* Gap between containers */
+    width: 100%;
+    align-items: center;
+    padding: 80px 120px;
+    max-width: 1440px;
+    background-color: var(--gray);
+    /* Limit max width of containers */
+}
+
+.sexer-gameplay .container {
+    max-width: 1440px;
+    width: 100%;
+    border: solid black 2px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+}
+
+.sexer-gameplay .container .card-holder {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 1;
+    margin-top: -400px;
+    margin-left: 940px;
+}
+
+.sexer-gameplay .container .slider-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    overflow: hidden;
+    max-width: 1000px;
+}
+
+.slider-wrapper .image-list {
+    display: flex;
+    gap: 20px;
+    /* Space between cards */
+    overflow-x: auto;
+    /* Enable horizontal scroll for dragging */
+    width: calc((189px * 5) + (20px * 4));
+    /* Five cards with gaps */
+    scrollbar-width: none;
+    /* Hide scrollbar for a cleaner look */
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar in WebKit browsers */
+}
+
+.flip-card {
+    width: 189px;
+    height: 340px;
+    flex: 0 0 auto;
+    /* Prevent cards from shrinking */
+}
+
+.slider-wrapper .slide-button {
     position: absolute;
     top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.play-button {
-    text-align: center;
-    padding: 20px;
-}
-
-.play-button button {
-    background-color: #fdd811;
-    border: 2px solid black;
-    border-radius: 15px;
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: 900;
-    color: #333;
+    height: 50px;
+    width: 50px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: #000;
+    font-size: 2.2rem;
     cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .navigation .menu ul {
-        flex-direction: column;
+.slider-wrapper .slide-button:hover {
+    background: #444;
+}
+
+.slider-wrapper .slide-button#prev-button {
+    left: -20px;
+}
+
+.slider-wrapper .slide-button#next-button {
+    right: -20px;
+}
+
+.slider-wrapper .image-list {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 100%;
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar-corner {
+    display: none;
+}
+
+/* Flip Card Effect */
+.image-list .flip-card {
+    perspective: 1000px;
+    width: 189px;
+    height: 340px;
+    cursor: pointer;
+    position: relative;
+}
+
+.image-list .flip-card .image-item {
+    width: 189px;
+    height: 340px;
+}
+
+.image-list .flip-card .thefont,
+.image-list .flip-card .theback {
+    position: absolute;
+    width: 100%;
+    /* Ensures the front and back take up full card width */
+    height: 100%;
+    /* Ensures the front and back take up full card height */
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+}
+
+.image-list .flip-card .theback {
+    transform: rotateY(180deg);
+}
+
+.image-list .flip-card.flipped .thefont {
+    transform: rotateY(180deg);
+}
+
+.image-list .flip-card.flipped .theback {
+    transform: rotateY(0deg);
+}
+
+.container .slider-scrollbar {
+    height: 15px;
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.slider-scrollbar .scrollbar-track {
+    height: 15px;
+    width: 410px;
+    background-color: #D9D9D9;
+    position: relative;
+    border-radius: 10px;
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+    height: 15px;
+}
+
+.slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: var(--black);
+    border-radius: inherit;
+    cursor: grab;
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+
+@media (max-width: 1023px) {
+    .slider-wrapper .slide-button {
+        display: none !important;
+    }
+
+    .slider-wrapper .image-list {
         gap: 10px;
-    }
-
-    .intro h1 {
-        font-size: 24px;
-    }
-
-    .icons {
-        flex-direction: column;
-    }
-
-    .icon img {
-        max-width: 50px;
     }
 }
