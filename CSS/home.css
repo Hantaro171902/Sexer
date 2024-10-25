@@ -39,6 +39,26 @@ button {
     outline: 0;
 }
 
+/* Floating button */
+.floating-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--blue);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
 /* Navbar */
 .header {
     position: fixed;
@@ -336,7 +356,8 @@ button {
     font-size: 25px;
 }
 
-.people-meaning .addition, .people-explain {
+.people-meaning .addition,
+.people-explain {
     font-family: 'Matahari';
     font-weight: 400;
     font-size: 21px;
@@ -359,5 +380,3 @@ button {
         margin-bottom: 20px;
     }
 }
-
-
