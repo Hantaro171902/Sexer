@@ -52,3 +52,16 @@ window.addEventListener("load", () => {
   const imageLists = document.querySelectorAll(".slider-wrapper .image-list");
   imageLists.forEach(initSlider); // Apply initSlider to each imageList
 });
+
+// Confetti button
+document.addEventListener("DOMContentLoaded", () => {
+  const jsConfetti = new JSConfetti();
+
+  document
+    .getElementsByClassName("btn-confetti")[0]
+    .addEventListener("click", () => {
+      jsConfetti.addConfetti();
+    });
+
+  console.log("confetti");
+});
