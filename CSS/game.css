@@ -21,7 +21,7 @@ body {
     width: 100%;
     background-color: var(--gray);
     background-size: cover;
-    font-family: 'Matahari', 'Nunito', sans-serif;
+    font-family: 'Matahari', "Nunito", sans-serif;
 
 }
 
@@ -95,14 +95,14 @@ button {
 }
 
 h1 {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-weight: 900;
     font-style: normal;
     font-size: 47px;
 }
 
 h2 {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-weight: 900;
     font-style: normal;
     font-size: 30px;
@@ -235,7 +235,7 @@ h3 {
 }
 
 .game-intro h1 {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-size: 47px;
     font-style: normal;
     font-weight: 900;

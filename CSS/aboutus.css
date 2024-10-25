@@ -21,7 +21,7 @@ body {
     height: fit-content;
     background-color: var(--gray);
     /* background-size: cover; */
-    font-family: 'Matahari', 'Nunito', sans-serif;
+    font-family: 'Matahari', "Nunito", sans-serif;
 }
 
 .main-container {
@@ -41,14 +41,14 @@ button {
 
 
 h1 {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-weight: 900;
     font-style: normal;
     font-size: 47px;
 }
 
 h2 {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-weight: 900;
     font-style: normal;
     font-size: 30px;
@@ -225,7 +225,7 @@ h3 {
 }
 
 .wrapper .title h1 {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-weight: 900;
     font-style: normal;
     font-size: 47px;
@@ -277,7 +277,7 @@ h3 {
 
 .wrapper p,
 b {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-weight: 900;
     font-style: normal;
     font-size: 30px;
@@ -296,7 +296,7 @@ b {
 }
 
 .photo h1 {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-weight: 900;
     font-style: normal;
     font-size: 47px;
@@ -310,7 +310,7 @@ b {
 
 .photo .role p {
     color: var(--gray);
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-size: 25px;
     font-weight: 900;
     font-style: normal;
@@ -370,7 +370,7 @@ b {
 
 .sexer-members .wrapper .photo .role p {
     color: var(--gray);
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-size: 17px;
     font-weight: 700;
     font-style: normal;
@@ -389,7 +389,7 @@ b {
 .sexer-members .content p,
 b {
     color: var(--black);
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-size: 30px;
     font-weight: 700;
     font-style: normal;
@@ -417,7 +417,7 @@ b {
 
 .sexer-group p,
 b {
-    font-family: 'Nunito';
+    font-family: "Nunito";
     font-size: 30px;
     font-weight: 900;
     font-style: normal;

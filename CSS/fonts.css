@@ -35,7 +35,7 @@
 /* Bold */
 @font-face {
     font-family: 'Matahari';
-    src: url(./Fonts/Matahari/Matahari-700Bold.otf);
+    src: url(./Fonts/Matahari/Matahari-700BoldOblique.otf);
     font-weight: 700;
     font-style: normal;
 }
@@ -54,4 +54,3 @@
     font-weight: 400;
     font-style: normal;
 }
-
