@@ -225,7 +225,7 @@ h3 {
 .game-intro {
     width: 100%;
     min-height: 100vh;
-    padding: 80px 120px;
+    padding: 100px 120px;
     background-color: var(--gray);
     display: flex;
     flex-direction: column;

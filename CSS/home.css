@@ -360,6 +360,7 @@ h3 {
     width: 204px;
     height: 204px;
     margin: auto;
+    filter: grayscale(100%);
 }
 
 .icon .people-meaning {
